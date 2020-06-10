@@ -9,7 +9,9 @@ def forwards_func(apps, schema_editor):
     con_model = apps.get_model("mainapp", "Contact")  # Load model for make changes
 
     # Create new category
-    pro_cat_obj = pro_cat_model.objects.create(pk=1, name="дом", description="отличная мебель для домашнего интерьера.")
+    pro_cat_obj = pro_cat_model.objects.create(
+        pk=1,
+        name="дом", description="отличная мебель для домашнего интерьера.")
     # Create new products in this category
     pro_model.objects.create(
         pk=1,
@@ -45,7 +47,8 @@ def forwards_func(apps, schema_editor):
 
     # Create new category
     pro_cat_obj = pro_cat_model.objects.create(
-        pk=2, name="офис", description="стильная и надежная офисная мебель нового поколения."
+        pk=2,
+        name="офис", description="стильная и надежная офисная мебель нового поколения."
     )
     # Create new products in this category
     pro_model.objects.create(
@@ -72,7 +75,8 @@ def forwards_func(apps, schema_editor):
 
     # Create new category
     pro_cat_obj = pro_cat_model.objects.create(
-        pk=3, name="модерн", description="мебель в стиле МОДЕРН подойдет для любого интерьера."
+        pk=3,
+        name="модерн", description="мебель в стиле МОДЕРН подойдет для любого интерьера."
     )
     # Create new products in this category
     pro_model.objects.create(
@@ -99,7 +103,8 @@ def forwards_func(apps, schema_editor):
 
     # Create new category
     pro_cat_obj = pro_cat_model.objects.create(
-        pk=4, name="классика", description="классический стиль актуален в любые времена."
+        pk=4,
+        name="классика", description="классический стиль актуален в любые времена."
     )
     # Create new products in this category
     pro_model.objects.create(
@@ -135,7 +140,8 @@ def forwards_func(apps, schema_editor):
 
     # Create contacts
     con_model.objects.create(
-        pk=1, phone="+7-888-888-8888", email="info@geekshop.ru", city="Москва", address="В пределах МКАД"
+        pk=1,
+        phone="+7-888-888-8888", email="info@geekshop.ru", city="Москва", address="В пределах МКАД"
     )
     con_model.objects.create(
         pk=2,
